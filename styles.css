@@ -25,7 +25,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    padding: 20px;
 }
 
 .logo {
@@ -234,7 +233,7 @@ textarea:focus-within {
         margin-top: 20px; /* Add space between logo and navbar */
         display: flex; /* Ensure navbar items are displayed inline */
         justify-content: center; /* Center items horizontally */
-        margin-bottom: 20px;
+        
     }
     
     .navbar a {
