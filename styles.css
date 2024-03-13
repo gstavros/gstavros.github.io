@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+
 }
 
 body {
@@ -224,25 +225,30 @@ textarea:focus-within {
 }
 @media screen and (max-width: 600px) {
     .header {
-      padding: 10px;
+        padding: auto;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
-  
-    .logo {
-      font-size: 20px;
-    }
-  
+    
     .navbar {
-      margin-top: 10px;
+        margin-top: 20px; /* Add space between logo and navbar */
+        display: flex; /* Ensure navbar items are displayed inline */
+        justify-content: center; /* Center items horizontally */
+        margin-bottom: 20px;
     }
-  
+    
     .navbar a {
-      margin-right: 10px;
+        font-size: 14px; /* Decrease font size for smaller screens */
     }
-  
-    #form0 {
-      margin: 20px auto;
+    .logo{
+        justify-content: center;
+        margin: auto;
+        display: flex;
+        padding-right: 100%;
+
+        
     }
-  }
+}
   
 
 #moreh1 {
