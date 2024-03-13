@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background: #081b29;
-    color:#ededed;
+body {
+    background: black;
+    color: #ededed;
+    padding-top: 56px;
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,31 +24,37 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-
+    padding: 20px;
 }
 
-
-.logo{
+.logo {
     font-size: 25px;
     color: #ededed;
-    text-decoration:none;
+    text-decoration: none;
     font-weight: 600;
     gap: 2px;
 }
 
-#cursor{
-
+#cursor {
     -webkit-animation: blink 0.8s infinite;
     width: 2px;
-    
+    height: auto;
     padding-left: 5px;
-  }
-  
-  @-webkit-keyframes blink {
-    0% {background: transparent}
-    50% {background: #fff}
-    100% {background: transparent}
-  }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        background: transparent
+    }
+
+    50% {
+        background: #fff
+    }
+
+    100% {
+        background: transparent
+    }
+}
 
 .navbar a {
     font-size: 18px;
@@ -59,50 +66,51 @@ body{
 }
 
 .navbar a:hover,
-.navbar a.active {
-    
+.navbar a.active{
     color: #00abf0;
-   
+    text-decoration:dashed
 }
 
 .navbar a {
     position: relative;
-  }
-  
-  .navbar a::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      border-radius: 4px;
-      background-color: #18272F;
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-    }
-  
-  .navbar a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);}
+}
 
-.arxiki{
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.navbar a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.arxiki {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
 
-.arxiki-content{
-    max-width: 500px; 
-    
+.arxiki-content {
+    max-width: 500px;
 }
+
 .arxiki-content h1 {
     font-size: 55px;
     font-weight: 700;
     line-height: 1.2;
 }
+
 .arxiki-content h3 {
     font-size: 32px;
     font-weight: 500;
@@ -114,43 +122,12 @@ body{
     margin: 20px 0 40px;
 }
 
-.arxiki-content button-box {
-    display: flex;
-    justify-content: space-between;
-    width:  345px;
-    height: 50px;
-}
-
-.button-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-left: 8px;
-}
-
-.button-box a:hover{
-    color: whitesmoke;
-}
-
-.arxiki-social{
+.arxiki-social {
     position: absolute;
     bottom: 50px;
     width: 180px;
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .arxiki-social a {
@@ -166,24 +143,30 @@ body{
     font-size: 20px;
     color: #00abf0;
     text-decoration: none;
-
 }
 
 .arxiki-social a:hover,
-.arxiki-social a.Pata{
+.arxiki-social a.Pata {
     color: gold;
 }
 
-
 #forma {
-color: white;
-padding-top: 10px;
-text-align: center;
-font-size: 60px;
-font-family:sans-serif;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    color: white;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 
-input{
+
+
+input {
     display: flex;
     background-color: white;
     width: 70%;
@@ -193,10 +176,9 @@ input{
     border-radius: 10px;
     border-color: black;
     margin-bottom: 20px;
-
 }
 
-textarea{
+textarea {
     display: flex;
     background-color: white;
     width: 70%;
@@ -207,42 +189,76 @@ textarea{
     border-color: black;
     margin-bottom: 25px;
     font-family: sans-serif;
-
 }
 
-input:focus-within{
+input:focus-within {
     outline: none;
-    border-color: green;
+    border-color: #00abf0;
     border-width: 3px;
 }
 
-textarea:focus-within{
+textarea:focus-within {
     outline: none;
-    border-color: green;
-    border-width: 3px;    
+    border-color: #00abf0;
+    border-width: 3px;
 }
 
-#btn{
-    background-color: green;
-    border-radius: 30px;
-    border-color: black;
-    width: min-content;
+#btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #00abf0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
     font-size: 25px;
     padding: 19x 18px;
-    text-align: center;
     display: flex;
-    margin: auto;
-}
+    margin: 16px auto;
+  }
 
-#btn:hover{
-    opacity: 50%;
+#btn:hover {
+    opacity: 85%;
     cursor: pointer;
 }
+@media screen and (max-width: 600px) {
+    .header {
+      padding: 10px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .navbar {
+      margin-top: 10px;
+    }
+  
+    .navbar a {
+      margin-right: 10px;
+    }
+  
+    #form0 {
+      margin: 20px auto;
+    }
+  }
+  
 
 #moreh1 {
     position: relative;
     text-align: center;
     padding: 10% 10%;
-    
 }
 
+#form0{
+    padding-top: 25px;
+}
+
+#yoo{
+font-size: 35;
+}
+
+#george{
+    color:#00abf0;
+}
