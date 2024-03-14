@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html lang="gr, en"
-
+<html lang="gr, en">
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="George Stavros">
     <meta name="description" content="George's Personal Website">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> george_stavros.</title>
+    <title>Giorgos Stavros</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel= "stylesheet"
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-
 <body>
     <header class="header">
         <a href="index.html" class="logo"><div id="cursor"> gStavros.</div></a>
-
         <nav class="navbar">
-          <a href="index.html" class="active" id="home-link">Home</a>
-          <a href="more.html" calss="active2" id="more-link">Find More About Me</a>
-          <a href="Contact.html" class="active3" id="contact-link">_Contact Me_</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="more.html" class="active2">Find More About Me</a>
+          <a href="Contact.html" class="active3">Contact Me</a>
         </nav>
-        </header>
-
-    <section id="form0">
-     <form action="https://formspree.io/f/xknlzbqw" method="POST">
-        
-        <input  type="text" name="onoma" placeholder="Type your name" autocomplete="off" required>
-        <input  name="epitheto" placeholder="Type your surname" autocomplete="off" required>
-        <input  type="email" name="email" placeholder="Type your email" autocomplete="off" required>
-        <textarea name="mεssage"  cols="60" rows="5" placeholder="Write something..."  autocomplete="off" required></textarea>
-        <button id="btn" type="submit">Send to George</button>
-     </form>
+    </header>
+    <section id="form0" class="contact-form">
+        <form action="https://formspree.io/f/xknlzbqw" method="POST">
+            <input type="text" name="onoma" placeholder="Type your name" autocomplete="off" required>
+            <input name="epitheto" placeholder="Type your surname" autocomplete="off" required>
+            <input type="email" name="email" placeholder="Type your email" autocomplete="off" required>
+            <textarea name="mεssage"  cols="60" rows="5" placeholder="Write something..."  autocomplete="off" required></textarea>
+            <button id="btn" type="submit">Send to George</button>
+        </form>
     </section>
-   
 </body>
 </html>

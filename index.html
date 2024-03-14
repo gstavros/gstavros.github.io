@@ -6,12 +6,13 @@
     <meta name="description" content="George's Personal Website">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>george_stavros.</title>
+    <title>Giorgos.</title>
     <link rel="stylesheet" href="styles.css">
     
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
+
     <header class="header">
         <a href="index.html" class="logo">
             <div id="cursor">gStavros.</div>
@@ -21,7 +22,9 @@
             <a href="more.html" class="active2">Find More About Me</a>
             <a href="Contact.html" class="active3">Contact Me</a>
         </nav>
+
     </header>
+    <section class="content">
     <section class="arxiki">
         <div class="arxiki-content">
             <h1 id="yoo">Hello there...</h1> 
@@ -32,12 +35,30 @@
                 I have a passion for all things internet, sports, and chess... yes you read that right.. chess. I may not be a grandmaster (yet), but I can definitely strategize my way to success.
             </p>
             <div class="arxiki-social">
-                <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://www.linkedin.com/in/giorgos-stavros/"><i class='bx bxl-linkedin-square'></i></a>
                 <a href="https://github.com/gstavros"><i class="bx bxl-github"></i></a>
                 <a href="https://medium.com/@georgestavros"><i class='bx bxl-medium-square' ></i></a>
             </div>
         </div>
     </section>
+</section>
 
+    <<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var currentPage = window.location.pathname.split("/").pop(); 
+        
+        
+        $('.navbar a').each(function() {
+            var linkHref = $(this).attr('href').split("/").pop(); 
+            
+            
+            if (linkHref === currentPage) {
+                $(this).addClass('active');
+            }
+        });
+    });
+    </script>
+    
 </body>
 </html>
