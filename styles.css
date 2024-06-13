@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Use border-box for consistent sizing */
     font-family: 'Poppins', sans-serif;
 
 }
@@ -12,7 +12,7 @@ body {
     background: black;
     color: #ededed;
     padding-top: 56px;
-    overflow-y: hidden;
+    overflow-y: auto; /* Allow scrolling if content exceeds viewport */
 }
 
 .header {
@@ -26,7 +26,6 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    padding: 20px;
 }
 
 .logo {
@@ -105,7 +104,7 @@ body {
 }
 
 .arxiki {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 56px); /* Adjust for header height */
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -119,18 +118,20 @@ body {
     font-size: 55px;
     font-weight: 700;
     line-height: 1.2;
+    margin-bottom: 10px; /* Add some space between headings */
 }
 
 .arxiki-content h3 {
     font-size: 32px;
     font-weight: 500;
     color: #00abf0;
+    margin-bottom: 20px; /* Add some space between headings and paragraph */
 }
 
 .arxiki-content p {
     font-size: 15px;
     margin: 20px 0 40px;
-     overflow-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .arxiki-social {
@@ -279,7 +280,7 @@ button:hover {
 }
 
 #yoo{
-font-size: 35;
+font-size: 35px;
 }
 
 #george{
@@ -290,3 +291,47 @@ font-size: 35;
     margin-top: 56px; 
     padding: 20px; 
 }
+
+/* Styles for the message container */
+#message-container {
+    margin-top: 10px; /* Add some spacing */
+    text-align: center; /* Center the message */
+    font-size: 16px;
+  }
+  
+  #message-container.hidden {
+    display: none; /* Hide the container by default */
+  }
+  
+  #message-container.success {
+    color: green; /* Green for success */
+  }
+  
+  #message-container.error {
+    color: red; /* Red for error */
+  }
+
+  #message-container {
+    position: absolute; /* Position it absolutely */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the message container */
+    padding: 20px;
+    background-color: #fff; /* White background for visibility */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure it's on top */
+    display: none; /* Hide it initially */
+  }
+  
+  /* Styles for the OK button */
+  #okButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00abf0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
