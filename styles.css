@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Use border-box for consistent sizing */
+    box-sizing: border-box; 
     font-family: 'Poppins', sans-serif;
 
 }
@@ -12,7 +12,7 @@ body {
     background: black;
     color: #ededed;
     padding-top: 56px;
-    overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+    overflow-y: auto; 
 }
 
 .header {
@@ -104,7 +104,7 @@ body {
 }
 
 .arxiki {
-    height: calc(100vh - 56px); /* Adjust for header height */
+    height: calc(100vh - 56px); 
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -118,14 +118,14 @@ body {
     font-size: 55px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 10px; /* Add some space between headings */
+    margin-bottom: 10px; 
 }
 
 .arxiki-content h3 {
     font-size: 32px;
     font-weight: 500;
     color: #00abf0;
-    margin-bottom: 20px; /* Add some space between headings and paragraph */
+    margin-bottom: 20px; 
 }
 
 .arxiki-content p {
@@ -292,7 +292,6 @@ font-size: 35px;
     padding: 20px; 
 }
 
-/* Styles for the message container */
 #message-container {
     margin-top: 10px; /* Add some spacing */
     text-align: center; /* Center the message */
@@ -300,31 +299,31 @@ font-size: 35px;
   }
   
   #message-container.hidden {
-    display: none; /* Hide the container by default */
+    display: none;
   }
   
   #message-container.success {
-    color: green; /* Green for success */
+    color: green;
   }
   
   #message-container.error {
-    color: red; /* Red for error */
+    color: red; 
   }
 
   #message-container {
-    position: absolute; /* Position it absolutely */
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the message container */
+    transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #fff; /* White background for visibility */
+    background-color: #fff; /
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Ensure it's on top */
-    display: none; /* Hide it initially */
+    z-index: 100; 
+    display: none; 
   }
   
-  /* Styles for the OK button */
+
   #okButton {
     margin-top: 10px;
     padding: 10px 15px;
