@@ -1,5 +1,5 @@
 // Initialize EmailJS
-emailjs.init('6dAek5ZWnvQ6C6qZo'); // Replace YOUR_PUBLIC_KEY with your actual key
+emailjs.init('6dAek5ZWnvQ6C6qZo'); 
 
 // Send Email Function
 function sendMail() {
@@ -10,7 +10,7 @@ function sendMail() {
     const message = document.getElementById('message').value;
 
     // Create an EmailJS service object
-    const service = 'service_gooqz7t'; // Replace with your service ID
+    const service = 'service_7c4b521'; // Replace with your service ID
     const template = 'template_3v37w4r'; // Replace with your template ID
 
     // Send the email using EmailJS
