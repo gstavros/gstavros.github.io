@@ -1,60 +1,100 @@
 <!DOCTYPE html>
-<html lang="gr, en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="George Stavros">
-    <meta name="description" content="George's Personal Website">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giorgos.</title>
+    <title>Your Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>George Stavros</h1>
+            <button class="theme-switch" onclick="toggleTheme()" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </header>
 
-    <header class="header">
-        <a href="index.html" class="logo">
-            <div id="cursor">gStavros.</div>
-        </a>
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="more.html" class="active2">Find More About Me</a>
-            <a href="Contact.html" class="active3">Contact Me</a>
-        </nav>
-    </header>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/giorgos-stavros/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/gstavros" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://georgestavros.medium.com/" target="_blank"><i class="fab fa-medium"></i> Medium</a>
+        </div>
+        <div class="divider"></div>
 
-    <section class="content">
-        <section class="arxiki">
-            <div class="arxiki-content">
-                <h1 id="yoo">Hello there...</h1>
-                <h1 id="george">I'm George</h1>
-                <p>
-                    I like to think of myself as a jack of all trades, master of none but lets not focus on that.
-                    I have a passion for all things internet, sports, and chess... yes you read that right.. chess. I may not be a grandmaster (yet), but I can definitely strategize my way to success.
-                </p>
-                <div class="arxiki-social">
-                    <a href="https://www.linkedin.com/in/giorgos-stavros/"><i class='bx bxl-linkedin-square'></i></a>
-                    <a href="https://github.com/gstavros"><i class="bx bxl-github"></i></a>
-                    <a href="https://medium.com/@georgestavros"><i class='bx bxl-medium-square' ></i></a>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a marketing graduate with experience in B2B digital development of products and e-sales from my latest internship. I have a proven track record of analyzing sales data, contributing to new projects, and creating engaging online content. Skilled in using various tools and platforms and coupled with experience in Agile environments. I am a team player with a strong work ethic and a passion for digital world.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Tech News Website</h3>
+                    <p>Creation of an website in wordpress. Main goal of the website is to inform the greek tech audience about the latest....
+                        <br> <a href='https://technest.gr' target="_blank">Technest.gr</a>
+                    </p>
+                    <a href="#" class="btn">View more</a>
+                </div>
+                <div class="project-card">
+                    <h3>Radio Website Redesign</h3>
+                    <p>Designed and implemented a new website for a radio station based in Sarande, Albania, using WordPress. The primary goal is to create...
+                        <br> <a href='sarandaradio.com target="_blank"'>Sarandaradio.com</a>
+                    </p>
+                    <a href="#" class="btn">View more</a>
                 </div>
             </div>
         </section>
-    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-bar">
+                    <div class="skill-name">Microsoft Office</div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-fill" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Social Media</div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-name">Wordrpess</div>
+                    <div class="skill-progress">
+                        <div class="skill-progress-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <p>Interested in working together? Let's connect!</p>
+            <a href="mailto:george.stbr@gmail.com" class="btn">Contact me</a>
+        </section>
+
+    </div>
+
     <script>
-    $(document).ready(function() {
-        var currentPage = window.location.pathname.split("/").pop(); 
-        
-        $('.navbar a').each(function() {
-            var linkHref = $(this).attr('href').split("/").pop(); 
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeSwitch = document.querySelector('.theme-switch i');
             
-            if (linkHref === currentPage) {
-                $(this).addClass('active');
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.setAttribute('data-theme', 'light');
+                themeSwitch.classList.remove('fa-sun');
+                themeSwitch.classList.add('fa-moon');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeSwitch.classList.remove('fa-moon');
+                themeSwitch.classList.add('fa-sun');
             }
-        });
-    });
+        }
     </script>
-    
 </body>
 </html>
