@@ -1,2 +1,3 @@
 # personal-website.github.io
-Personal Website
+Hello, this is my personal portofolio.
+Designed by me and implemented with the help of claude ai.
